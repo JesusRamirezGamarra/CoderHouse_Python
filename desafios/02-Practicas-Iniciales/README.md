@@ -124,3 +124,4 @@ Los datos deben guardarse en variables y deben ser dinámicos por medio de input
 #### informacion adicional 
 * https://www.freecodecamp.org/espanol/news/python-lista-append-como-agregar-elementos-a-una-lista-explicado-con-ejemplos/
 * https://www.snakify.org/es/lessons/two_dimensional_lists_arrays/
+* https://www.geeksforgeeks.org/
