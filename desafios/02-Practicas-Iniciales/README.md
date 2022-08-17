@@ -8,7 +8,7 @@
   </p>
 </p>
 
-# MI PRIMER PROGRAMA EN PYTHON
+# PRACTICAS INICIALES
 
 ## Consigna 1:  
 ### Identifica el tipo de dato (int, float, string, list o touple) de los siguientes valores literales:
@@ -24,7 +24,7 @@ Dato :
 7)  ' '
 8)  (1, -5, "Hola!")
 ```
-* nota_1  cuenta como el 40% de la nota final
+* nota_1 cuenta como el 40% de la nota final
 * nota_2 cuenta como el 60% de la nota final
 
 ## Consigna 2:  
