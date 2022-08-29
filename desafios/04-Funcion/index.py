@@ -6,18 +6,37 @@
 rd={'type':int,'Year':'Only leap years','docstring':'Validate that the entered year is a leap year, > 1582'}
 def año_bisiesto(year:'int')->rd:
     try:
-        year = int(year)
-        if year >1581 :
+        
+        #year = int(year)
+        if type(year)==int and year >1581 :
             print( "El año {} es bisiesto".format(year) if not year % 4 and (year % 100 or  not year % 400) else "El año {} no es bisiesto".format(year))
+            return True
         else : 
-            print('Error, no es un año valido. "bis sextus dies ante calendas martii" fue instaurado el 24 de febrero de 1582 ( para mas informacion ver : https://es.wikipedia.org/wiki/A%C3%B1o_bisiesto ), Vuelva a ingresar un año Valido para continuar.')        
+            print('Error,{} no es un año valido. "bis sextus dies ante calendas martii" fue instaurado el 24 de febrero de 1582 ( para mas informacion ver : https://es.wikipedia.org/wiki/A%C3%B1o_bisiesto ), Vuelva a ingresar un año Valido para continuar.'.format(year))        
+            #raise AssertionError()
+            return False
 
     except ValueError:
-        print("Error, ingrese un número.No es un año valido. Vuelva a ingresar un año Valido para continuar.")
+        print("Error, ingrese un número.{} No es un año valido. Vuelva a ingresar un año Valido para continuar.".format(year))
+        #raise AssertionError()
+        return False
 
 if __name__ == '__main__':
+    assert año_bisiesto(1500) == False , 'ok'
+    assert año_bisiesto(2012.0) == False, 'ok'
+    assert año_bisiesto('2012q') == False, 'ok'
+    assert año_bisiesto(2012) == True, 'ok'
+    assert año_bisiesto(2010) == True, 'ok'
+    assert año_bisiesto(2000) == True, 'ok'
+    assert año_bisiesto(1900) == True, 'ok'
+    print("*" * 100)
+    print("TODOS LOS CASOS DE TEST PASARON")
+    print("*" * 100)    
     year = input(f"Ingrese un año :")
-    print(año_bisiesto.__annotations__)
     #print(inspect.getfullargspec(año_bisiesto))
+    print(año_bisiesto.__annotations__)    
     año_bisiesto(year)
+    
+
+    
     
