@@ -9,24 +9,6 @@
 # ```
 
 
-#test_list = ["434", "823", "98", "74","a",2] 
-
-# def convertir(p):
-#     return str(p).isdigit()
-
-# print(convertir(2) + "2" )
-
-
-# test_list = [1, 5, 7, 13, 22, 15, 26, 64, 34, 72, 52, 14,'1']
-# print("The original list is : " + str(test_list))   
-# # res = all(map( convertir , test_list))   
-# res = all(map(  lambda p: str(p).isdigit(),test_list))
-# print(res)
-# print("Are all strings digits ? : " + str(res))
-
-
-
-
 rd={'listNumber':list,'list number':'integers',
     'docstring':'odd and even list'}
 def separar(listNumber:'list')->rd:
@@ -54,13 +36,3 @@ if __name__ == '__main__':
     pares, impares = separar([1, 5, 7, 13, 22, 15, 26, 64, 34, 72, 52, 14])  
     print(pares)
     print(impares)
-
-    # listNumber = input(f"Ingrese una lista de valores a separar en pares e impares :")
-    # print(  separar(listNumber)  )
-
-# list.isEmpty())
-# if(str != null && !str.trim().isEmpty())
-# if list:
-#       # No vacía
-# else:
-#   # Vacía

@@ -8,7 +8,7 @@
 
 rd={'number01':int,'number':'integers',
     'number02':int,'number':'integers',
-    'docstring':'The area of ​​a circle is pi multiplied by the radius squared (A = π r²).'}
+    'docstring':'relationship between 2 numbers to know if the first number is greater than, less than or equal to the second number.'}
 def relacion(number01:'int',number02:'int')->rd:
     try:
         number01 = int(number01)
@@ -44,6 +44,6 @@ if __name__ == '__main__':
     print( relacion(5,5)  )
 
 
-    # numero1 = input(f"Ingrese valor del numero #1 :")
-    # numero2 = input(f"Ingrese valor del numero #2 :")
-    # print(  relacion(numero1,numero2)  )
+    numero1 = input(f"Ingrese valor del numero #1 :")
+    numero2 = input(f"Ingrese valor del numero #2 :")
+    print(  relacion(numero1,numero2)  )
