@@ -3,6 +3,7 @@
 # Devolver el límite inferior si el número es menor que éste
 # Devolver el límite superior si el número es mayor que éste.
 # Devolver el número sin cambios si no se supera ningún límite.
+
 # Comprueba el resultado de recortar 15 entre los límites 0 y 10
 
 rd={'numberToCut':int,'number':'integers',
@@ -15,9 +16,9 @@ def recortar(numberToCut:'int',lowerLimit:'int',upperimit:'int')->rd:
         lowerLimit = int(lowerLimit)
         upperimit = int(upperimit)
         if type(numberToCut)==int and type(lowerLimit)==int and type(upperimit)==int :
-            if (numberToCut < lowerLimit) :
+            if (lowerLimit < numberToCut ) :
                 return lowerLimit
-            elif (numberToCut > lowerLimit) :
+            elif (upperimit > numberToCut) :
                 return upperimit
             else :
                 return numberToCut
@@ -32,20 +33,15 @@ def recortar(numberToCut:'int',lowerLimit:'int',upperimit:'int')->rd:
 
 
 if __name__ == '__main__':
-    print('dsfdfdsf')
-    recortar(15,0,10) 
-    # print ( recortar(-12,24) ) 
-    # assert recortar(15,0,10)  == 6, 'Prueba Satisfactoria parametros Numer01 :-12, Numer02 : 24'
+    assert recortar(15,12,15)  == 12, 'Ok'
+    assert recortar(15,15,20)  == 20, 'Ok'
+    assert recortar(15,15,15)   == 15, 'Ok'
     
-    
-    # print("*" * 100)
-    # print( intermedio.__annotations__['return'] )    
-    # print( intermedio(5,10)  )
-    # print( intermedio(10,5)  )
-    # print( intermedio(5,5)  )
-    print ( recortar(15,0,10)   ) 
+    print("*" * 100)
+    print( recortar.__annotations__['return'] )    
+    print ( recortar(15,0,10)   )     
 
-    # numberToCut = input(f"Ingrese valor a recortar :")
-    # lowerLimit  = input(f"Ingrese valor del numero #1 para el Limite Inferior:")
-    # upperimit   = input(f"Ingrese valor del numero #2 para el limite Superior:")
-    # print(  recortar(numberToCut,lowerLimit,upperimit)  )
+    numberToCut = input(f"Ingrese valor a recortar :")
+    lowerLimit  = input(f"Ingrese valor del numero #1 para el Limite Inferior:")
+    upperimit   = input(f"Ingrese valor del numero #2 para el limite Superior:")
+    print(  recortar(numberToCut,lowerLimit,upperimit)  )
